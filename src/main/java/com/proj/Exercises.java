@@ -35,7 +35,9 @@ public class Exercises {
 
     public static String thirdTask(Connection connection) {
         try (PreparedStatement statement = connection.prepareStatement(
-                "SELECT address, prefix_code FROM chart WHERE appellation LIKE 'Университет' AND CAST(TRIM(number_floor,'абвгдеёжзийклмнопрстуфхцчшщъыьэюя-М') AS INTEGER) > 5 AND year_construction != ''")) {
+                "SELECT address, prefix_code FROM chart WHERE appellation LIKE" +
+                        " 'Университет' AND CAST(TRIM(number_floor,'абвгдеёжзийклмнопрстуфхцчшщъыьэюя-М')" +
+                        " AS INTEGER) > 5 AND year_construction != ''")) {
             StringBuilder builder = new StringBuilder();
             int i = 0;
             int avg = 0;

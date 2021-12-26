@@ -16,9 +16,6 @@ public class Main {
         TableParser parser = new TableParser();
         SqlGenerator sql = new SqlGenerator();
 
-//        for (Base value : parser.bases)
-//            sql.generateString(value);
-
         Map<Integer, Integer> map = new LinkedHashMap<>();
 
         for (var countFloors = 1; 28 >= countFloors; countFloors++) {
